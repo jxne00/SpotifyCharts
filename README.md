@@ -10,7 +10,7 @@ Before the webapp can be run, the sql database has to be setup using the sql scr
 
 **To run script:**
 
-1. After using `mysql` command to start the sql terminal (in local instance), either use `source db_setup/setup.sql` to setup the entire database at a time, or follow steps 2 - 4 to step through the setup process. Step 5 has to be done for both methods.
+1. Use `mysql` command to start the sql terminal (in local instance),.
 
 2. once MySQL connection is successful, use `source db_setup/0-create-db.sql` to create the database.
 
