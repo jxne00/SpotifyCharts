@@ -1,10 +1,8 @@
 # Spotify Charts
 
-A node web app to demonstrate querying from the sql database.
+A node web app to demonstrate querying from a sql database.
 
-## Video Demo
-
-https://youtu.be/buXXAq0NFtI
+Watch the demo video [here](https://youtu.be/mC8D7VYpJLM).
 
 ## Database setup
 
@@ -33,3 +31,5 @@ Database should now be all set!
 3. Navigate to the URL `localhost:3000` in the browser (or click the link in the terminal output).
 
 The web app should now be displayed!
+
+<img src="https://github.com/jxne00/SpotifyCharts/blob/main/src/web1.png" alt="WebAppImage">
