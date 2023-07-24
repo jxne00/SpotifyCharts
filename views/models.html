@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <ul class="mynavbar">
+        <li>
+            <a href="/">Tables</a>
+        </li>
+
+        <li>
+            <a href="#">Questions</a>
+            <div class="submenu">
+                <ul>
+                    <li><a href="/question1">Question 1</a></li>
+                    <li><a href="/question2">Question 2</a></li>
+                    <li><a href="/question3">Question 3</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="active">
+            <a href="/models">Diagrams</a>
+        </li>
+    </ul>
+
+    <div class="model">
+        <h1>Relational Schema</h1>
+
+        <img src="image/relational_schema.png" alt="Relational Schema">
+    </div>
+
+    <div class="model">
+        <h1>E/R Model</h1>
+
+        <img src="image/ER_model.png" alt="ER Model">
+    </div>
+</body>
+
+</html>

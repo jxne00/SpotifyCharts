@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- custom css and scripts -->
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+    <script src="script/showDivScript.js"></script>
+
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+
+<body>
+    <!-- navbar -->
+    <ul class="mynavbar">
+        <li class="active">
+            <a href="/">Tables</a>
+        </li>
+
+        <li>
+            <a href="#">Questions</a>
+            <div class="submenu">
+                <ul>
+                    <li><a href="/question1">Question 1</a></li>
+                    <li><a href="/question2">Question 2</a></li>
+                    <li><a href="/question3">Question 3</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            <a href="/models">Diagrams</a>
+        </li>
+    </ul>
+
+    <!-- buttons to select which table to display -->
+    <div class="buttonRow">
+        <form method="POST" action="/">
+            Select Table:
+            <% tablenames.forEach((table)=> { %>
+            <button name="userOption" type="submit" value=<%=table %>>
+                <%= table %>
+            </button>
+            <% }) %>
+        </form>
+    </div>
+
+
+    <h2>
+        <%= title %>
+    </h2>
+
+    <!-- displays SQL query used to retrieve table data -->
+    <pre class="queryUsedCont">
+    <button onclick="showHideDiv()">Show SQL Query Used</button>
+    <div class="queryUsed" id="queryUsed">
+      <%= queryused %>
+    </div>
+  </pre>
+
+    <!-- table displaying data passed in from backend -->
+    <table>
+        <thead>
+            <tr>
+                <% Object.keys(tableData[0]).forEach((column)=> { %>
+                <th>
+                    <%= column %>
+                </th>
+                <% }) %>
+            </tr>
+        </thead>
+        <tbody>
+            <% tableData.forEach((row)=> { %>
+            <tr>
+                <% Object.values(row).forEach((value)=> { %>
+                <td>
+                    <%= value %>
+                </td>
+                <% }) %>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+
+</html>

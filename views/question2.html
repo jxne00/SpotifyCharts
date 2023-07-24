@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+    <script src="script/showDivScript.js"></script>
+    <title>Q2</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <ul class="mynavbar">
+        <li>
+            <a href="/">Tables</a>
+        </li>
+
+        <li class="active">
+            <a href="#">Questions</a>
+            <div class="submenu">
+                <ul>
+                    <li><a href="/question1">Question 1</a></li>
+                    <li><a href="/question2">Question 2</a></li>
+                    <li><a href="/question3">Question 3</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            <a href="/models">Diagrams</a>
+        </li>
+    </ul>
+
+    <h2>
+        <%= title %>
+    </h2>
+
+    <div>
+        <text>
+            <%= question%>
+        </text>
+    </div>
+
+    <!-- displays SQL query used to retrieve table data -->
+    <pre class="queryUsedCont">
+    <button onclick="showHideDiv()">Show SQL Query Used</button>
+    <div class="queryUsed" id="queryUsed">
+      <%= queryused %>
+    </div>
+  </pre>
+
+    <!-- table displaying data passed in from backend -->
+    <table>
+        <thead>
+            <tr>
+                <th>Artist Name</th>
+                <th>Total streams</th>
+                <th>Artist's Genres</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% tableData.forEach((row)=> { %>
+            <tr>
+                <td>
+                    <%= row.name %>
+                </td>
+                <td>
+                    <%= row.streams %>
+                </td>
+                <td>
+                    <%= row.genres %>
+                </td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
