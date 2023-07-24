@@ -10,7 +10,7 @@ Before the webapp can be run, the sql database has to be setup using the sql scr
 
 **To run script:**
 
-1. Use `mysql` command to start the sql terminal (in local instance).
+1. After using `mysql` command to start the sql terminal (in local instance), either use `source db_setup/setup.sql` to setup the entire database at a time, or follow steps 2 - 4 to step through the setup process. Step 5 has to be done for both methods.
 
 2. once MySQL connection is successful, use `source db_setup/0-create-db.sql` to create the database.
 
@@ -26,9 +26,11 @@ Database should now be all set!
 
 1. Ensure the database is setup following the **Database setup** instructions above.
 
-2. Use the command `node index.js` to start the web app connection.
+2. Install required packages using the command `npm install`.
 
-3. Navigate to the URL `localhost:3000` in the browser (or click the link in the terminal output).
+3. Start the web app with the command `node index.js`.
+
+4. Navigate to the URL `localhost:3000` in the browser (or click the link in the terminal output).
 
 The web app should now be displayed!
 
